@@ -23,12 +23,16 @@ class Employee:
             if i.department == department:
                 department_employees.append(str(i))
         return department_employees
-    
+
     def __str__(self):
         return f"{self.name} from {self.department}"
 
 # Example Usage:
 employee1 = Employee("Alice", 50000, "HR")
 employee2 = Employee("Bob", 60000, "Finance")
+employee3 = Employee("Mohamad", 40000, "Tech")
+employee4 = Employee("Sam", 55000, "Finance")
+employee5 = Employee("Mik", 45000, "Tech")
+employee6 = Employee("Monica", 65000, "HR")
 hr_employees = Employee.get_employees_by_department("HR")
 print(hr_employees)  # Output: ['Alice']
