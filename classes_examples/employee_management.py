@@ -24,6 +24,14 @@ class Employee:
                 department_employees.append(str(i))
         return department_employees
 
+    @classmethod
+    def get_employees_by_salary(cls, salary):
+        salary_employees = []
+        for i in cls.all_employees:
+            if i.salary >= salary:
+                salary_employees.append(str(i))
+        return salary_employees
+
     def __str__(self):
         return f"{self.name} from {self.department}"
 

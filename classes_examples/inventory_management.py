@@ -23,8 +23,8 @@ class Inventory:
     @classmethod
     def merge_inventories(cls, first_inventory, second_inventory):
         merged = cls()
-        for item in first_inventory.items:
-            merged.add_item(item, first_inventory.items[item])
+        for item, quantity in first_inventory.items:
+            merged.add_item(item, quantity)
         for item in second_inventory.items:
             merged.add_item(item, second_inventory.items[item])
         return merged
